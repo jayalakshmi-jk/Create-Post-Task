@@ -68,7 +68,6 @@ let btnn = document.querySelector(".ok");
 
 btnn.addEventListener("click", posdata);
 function posdata() {
-  console.log("heyyyyyyyyyyyyyyyyyy");
   let title = document.getElementById("title").value;
   let body = document.getElementById("para").value;
 
@@ -81,8 +80,8 @@ function posdata() {
     }
   };
   let data = { title, body };
-  console.log(data);
   xhr.send(JSON.stringify(data));
+  closePopup()
 }
 getdata();
 
