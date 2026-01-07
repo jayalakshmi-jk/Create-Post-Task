@@ -1,9 +1,8 @@
-// window.location.port = 5000;
+
 function getdata() {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "https://mimic-server-api.vercel.app/posts");
   xhr.onreadystatechange = function () {
-    // console.log(xhr);
     if (xhr.readyState == 4 && xhr.status == 200) {
       let post = JSON.parse(xhr.response);
       console.log(post);
@@ -67,7 +66,7 @@ function closePopup() {
 let btnn = document.querySelector(".ok");
 
 btnn.addEventListener("click", posdata);
-function posdata() {
+function posdata() {  
   let title = document.getElementById("title").value;
   let body = document.getElementById("para").value;
 
